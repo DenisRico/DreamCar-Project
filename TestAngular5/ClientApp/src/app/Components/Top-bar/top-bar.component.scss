@@ -1,0 +1,58 @@
+/* Top Bar */
+.top-bar-menu {
+  outline: none;
+  border: none;
+  background-color: #F2F9F8;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  color: #5A807B;
+  padding:20px;
+}
+.top-bar-menu:hover {
+  color:black;
+  background-color: #F2F9F8;
+}
+.top-bar-menu-item {
+  outline: none;
+  border: none;
+}
+.top-bar-menu-div {
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+  margin-right:20%;
+}
+.top-bar {
+  width: 100%;
+  height: 68px;
+  background-color: #1976d2;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar h1 {
+  color: white;
+  margin: 0;
+}
+
+.nav-bar1{
+    text-align:end;
+}
+/* Checkout Cart, Shipping Prices */
+
+.cart-item, .shipping-item {
+  width: 100%;
+  min-width: 200px;
+  max-width: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 16px 32px;
+  margin-bottom: 8px;
+  border-radius: 2px;
+  background-color: #EEEEEE;
+}
