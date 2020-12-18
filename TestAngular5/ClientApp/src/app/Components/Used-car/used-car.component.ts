@@ -14,9 +14,9 @@ import { CarService } from '../../Services/Car/car.service';
 })
 export class UsedCarComponent implements OnInit {
 
-  cars: Car[];                 // массив товаров
-  car: Car = new Car();   // изменяемый товар
-  tableMode: boolean = true;          // табличный режим
+  cars: Car[];                 // array for car
+  car: Car = new Car();   // car for change
+  tableMode: boolean = true;          // table mode
 
   constructor(
     private carService: CarService
