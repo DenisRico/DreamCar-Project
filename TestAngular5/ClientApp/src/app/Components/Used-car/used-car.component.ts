@@ -57,11 +57,13 @@ export class UsedCarComponent implements OnInit {
         .subscribe(data => this.loadProducts());
     }
     this.cancel();
+    
   }
 
   cancel() {
     this.car = new Car();
     this.tableMode = true;
+    
   }
   
 

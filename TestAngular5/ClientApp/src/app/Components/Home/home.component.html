@@ -1,0 +1,83 @@
+<!--carusel bootstrap-->
+<div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+  <div class="carousel-inner rounded">
+    <div data-interval="2000" class="carousel-item active ">
+      <img class="d-block w-100 h-100" src="https://sun9-10.userapi.com/impg/qKGA8onBLivxxKR0-_uftGL1EoTGII1SU5i5-Q/Ykj2pdLLNHk.jpg?size=1600x418&quality=96&proxy=1&sign=6750050cdb154c674c9f989238386409&type=album" alt="First slide">
+      <div class="carousel-content">What is your dream car?</div>
+    </div>
+    <div data-interval="2000" class="carousel-item">
+      <img class="d-block w-100 " src="https://sun9-22.userapi.com/impg/vTOlgSksJ9h0ODTZqi2xNTNbAS3Q_6ZgQLi5JQ/szYFEPtAZYQ.jpg?size=1600x418&quality=96&proxy=1&sign=4655a0c79ddc7df128b56447d92ed172&type=album" alt="Second slide">
+      <div class="carousel-content">What is your dream car?</div>
+    </div>
+    <div data-interval="2000" class="carousel-item">
+      <img class="d-block w-100 h-75" src="https://sun9-50.userapi.com/impg/X9M-87SbvkviVUtxF4VlqjvbrReInYQJBXeHMg/3INXpotGwHs.jpg?size=1600x418&quality=96&proxy=1&sign=68001b5573e50c30c927c591a8744571&type=album" alt="Third slide">
+      <div class="carousel-content">What is your dream car?</div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
+<div class="container">
+
+  <!--Content Text-->
+  <div class="space-text">
+    <div class="space-text-child">Want to own your dream car? Dreams come true here</div>
+  </div>
+  
+  <!--grid angular material-->
+  <mat-grid-list cols="6" rowHeight="120px" >
+    <mat-grid-tile *ngFor="let car of cars"
+                   [colspan]="2"
+                   [rowspan]="2"
+                    class="grid-image">
+      <a><img  src="{{car.image}}" class="img-fluid" [routerLink]="['product', car.id]" alt="{{car.text}}" onerror="this.style.display='none'" /></a>
+      <mat-grid-tile-footer>
+        <div>{{car.description}}</div>
+      </mat-grid-tile-footer>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <!--Content Text-->
+  <div class="space-text">
+    <div class="space-text-child">Want to own your dream car? Dreams come true here</div>
+  </div>
+
+
+  <!--Tabs from Angular materials-->
+  <mat-tab-group mat-align-tabs="start">
+    <mat-tab label="Why choose us">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</mat-tab>
+    <mat-tab label="Who we are">
+      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+    </mat-tab>
+    <mat-tab label="What you want">Content 3</mat-tab>
+  </mat-tab-group>
+
+  <!--Content Text-->
+  <div class="space-text">
+    <div class="space-text-child">Our team is here for you</div>
+  </div>
+
+  <!--cards from angular materials-->
+  <div class="cards" *ngFor="let officer of persons">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>{{officer.name}}</mat-card-title>
+        <mat-card-subtitle>{{officer.position}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image  src="{{officer.image}}" class="staff-image" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          {{officer.profile}}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>

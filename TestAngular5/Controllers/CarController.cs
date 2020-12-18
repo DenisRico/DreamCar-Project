@@ -19,8 +19,8 @@ namespace TestAngular5.Controllers
         //service
         ICarService _carService;
         //DataBase context
-        ApplicationContext db;
-        public CarController(ApplicationContext context, ICarService carService)
+        DatabaseContext db;
+        public CarController(DatabaseContext context, ICarService carService)
         {
             db = context;
             _carService = carService;

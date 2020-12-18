@@ -12,9 +12,9 @@ namespace Dream.BusinessLogic.Services.Car
 {
     public class CarService : ICarService 
     {
-        private readonly ApplicationContext _contextFactory;
+        private readonly DatabaseContext _contextFactory;
         
-        public CarService(ApplicationContext contextFactory)
+        public CarService(DatabaseContext contextFactory)
         {
             _contextFactory = contextFactory;
         }

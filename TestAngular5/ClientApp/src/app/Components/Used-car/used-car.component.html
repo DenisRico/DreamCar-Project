@@ -1,18 +1,36 @@
-<input type="button" value="Добавить" class="btn btn-primary" (click)="add()" />
-<h2>Список моделей</h2>
-<table *ngIf="tableMode; else create" class="table table-striped">
-  <tbody>
-    <tr *ngFor="let p of cars">
-      <ng-template [ngIf]="car?.id!=p.id" [ngIfElse]="edit">
-        <td><a [routerLink]="['car', p.id]" class="nav-link">{{p?.name}}</a></td>
-        <td>
-          <button class="btn btn-danger" (click)="delete(p)">Delete</button>
-          <button class="btn btn-primary" (click)="editCar(p)">Change</button>
-        </td>
-      </ng-template>
-    </tr>
-  </tbody>
-</table>
+<div class="container">
+  <h2 class="title">
+    List of cars <input type="button" value="Add car" class="btn btn-primary" (click)="add()" />
+  </h2>
+  <table *ngIf="tableMode; else create" class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Year</th>
+        <th scope="col">Condition</th>
+        <th scope="col">Price</th>
+        <th scope="col">Color</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of cars">
+        <ng-template [ngIf]="car?.id!=p.id" [ngIfElse]="edit">
+          <td><a class="nav-link" [routerLink]="['product', p.id]">{{p?.name}}</a></td>
+          <td><a class="nav-link" [routerLink]="['product', p.id]">{{p?.year}}</a></td>
+          <td><a class="nav-link" [routerLink]="['product', p.id]">{{p?.condition}}</a></td>
+          <td><a class="nav-link" [routerLink]="['product', p.id]">{{p?.price}}</a></td>
+          <td><a class="nav-link" [routerLink]="['product', p.id]">{{p?.color}}</a></td>
+          <td><a class="nav-link" [routerLink]="['product', p.id]">{{p?.description}}</a></td>
+          <td class="btn-action">
+            <button class="btn btn-danger " (click)="delete(p)">Delete</button>
+            <button class="btn btn-primary" (click)="editCar(p)">Change</button>
+          </td>
+        </ng-template>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 
 <!--шаблон для редактирования-->
@@ -24,7 +42,22 @@
     <input type="number" [(ngModel)]="car.year" class="form-control" />
   </td>
   <td>
+    <input type="text" [(ngModel)]="car.condition" class="form-control" />
+  </td>
+  <td>
+    <input type="text" [(ngModel)]="car.fuelType" class="form-control" />
+  </td>
+  <td>
+    <input type="text" [(ngModel)]="car.color" class="form-control" />
+  </td>
+  <td>
     <input type="number" [(ngModel)]="car.price" class="form-control" />
+  </td>
+  <td>
+    <input type="text" [(ngModel)]="car.description" class="form-control" />
+  </td>
+  <td>
+    <input type="text" [(ngModel)]="car.image" class="form-control" />
   </td>
   <td>
     <input type="button" value="Сохранить" (click)="save()" class="btn btn-sm btn-success" />
@@ -36,18 +69,38 @@
 <!--шаблон для добавления-->
 <ng-template #create>
   <div class="form-group">
-    <label>Модель</label>
+    <label>Model</label>
     <input type="text" [(ngModel)]="car.name" class="form-control" />
   </div>
   <div class="form-group">
-    <label>Производитель</label>
+    <label>Year</label>
     <input type="number" [(ngModel)]="car.year" class="form-control" />
   </div>
   <div class="form-group">
-    <label>Цена</label>
+    <label>Condition</label>
+    <input type="text" [(ngModel)]="car.condition" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label>Fuel type</label>
+    <input type="text" [(ngModel)]="car.fuelType" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label>Color</label>
+    <input type="text" [(ngModel)]="car.color" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label>Price</label>
     <input type="number" [(ngModel)]="car.price" class="form-control" />
   </div>
   <div>
+    <div class="form-group">
+      <label>Description</label>
+      <input type="text" [(ngModel)]="car.description" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label>Image</label>
+      <input type="text" [(ngModel)]="car.image" class="form-control" />
+    </div>
     <input type="button" value="Сохранить" (click)="save()" class="btn btn-success" />
     <input type="button" value="Отмена" (click)="cancel()" class="btn btn-warning" />
   </div>

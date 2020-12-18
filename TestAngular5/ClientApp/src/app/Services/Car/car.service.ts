@@ -21,7 +21,7 @@ export class CarService {
         return this.http.get(this.url + '/' + id);
     }
      
-    createCar(car: Car) {
+    createCar(car: Car)  {
         return this.http.post(this.url, car);
     }
     updateCar(car: Car) {

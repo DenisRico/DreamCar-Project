@@ -1,9 +1,9 @@
-<div *ngIf="loaded">
-  <h2>Модель {{product.id}}</h2>
-  <div>
-    <p><b>Модель:</b> {{product.name}}</p>
-    <p><b>Производитель:</b> {{product.company}}</p>
-    <p><b>Цена:</b> {{product.price}}</p>
-    <p><a routerLink="/" class="nav-link">К списку моделей</a></p>
-  </div>
+
+<div class="container" *ngIf="loaded">
+  <h2>Name Car: {{car.name}}</h2>
+  <img src="{{car.image}}" />
+  <p><b>Condition:</b> {{car.condition}}</p>
+  <p><b>Price:</b> {{car.price}}</p>
+  <p><b>Color:</b> {{car.color}}</p>
+  <p><a routerLink="/" class="nav-link">Return</a></p>
 </div>

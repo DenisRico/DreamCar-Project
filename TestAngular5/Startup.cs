@@ -7,8 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Dream.DataAccess.Context;
 using Microsoft.EntityFrameworkCore;
 using Dream.DependencyInjection;
-using Dream.Interfaces.Services;
-using Dream.BusinessLogic.Services.Car;
+
 
 namespace TestAngular5
 {
@@ -24,16 +23,16 @@ namespace TestAngular5
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+           var connectionString = Configuration.GetConnectionString("DefaultConnection");
 
-            string connectionString = "Server=DESKTOP-06HJETK\\SQLEXPRESS;Database=productsdb;Trusted_Connection=True;";
-            services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connectionString));
             services.AddControllers();
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/dist";
             });
-            //services.AddTransient<ICarService, CarService>();
+            
             services.RegisterBusinessLogicServices();
         }
 
