@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Presentation", "TestAngular5\Presentation.csproj", "{95403A33-7820-4C8A-997C-1878E67CD384}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAngular5", "TestAngular5\TestAngular5.csproj", "{95403A33-7820-4C8A-997C-1878E67CD384}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{B56541F3-BDE9-4A95-B3FB-80F3EFB7FA03}"
 EndProject
