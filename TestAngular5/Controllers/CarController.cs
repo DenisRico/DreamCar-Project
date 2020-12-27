@@ -59,7 +59,7 @@ namespace TestAngular5.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(Car car)
+        public async Task<IActionResult> Post(Dream.BusinessLogic.Models.CarModels.Car car)
         {
             try
             {
@@ -75,22 +75,7 @@ namespace TestAngular5.Controllers
             }
         }
 
-        ///// <summary>
-        ///// Добавляем объект car
-        ///// </summary>
-        ///// <param name="car"></param>
-        ///// <returns></returns>
-        //[HttpPost]
-        //public IActionResult Post(Car car)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        db.Cars.Add(car);
-        //        db.SaveChanges();
-        //        return Ok(car);
-        //    }
-        //    return BadRequest(ModelState);
-        //}
+    
 
 
         /// <summary>
@@ -99,7 +84,7 @@ namespace TestAngular5.Controllers
         /// <param name="car"></param>
         /// <returns></returns>
         [HttpPut]
-        public async Task<IActionResult> Put(Car car)
+        public async Task<IActionResult> Put(Dream.BusinessLogic.Models.CarModels.Car car)
         {
             try
             {
@@ -116,22 +101,7 @@ namespace TestAngular5.Controllers
         }
 
 
-        ///// <summary>
-        ///// Обновление Car
-        ///// </summary>
-        ///// <param name="car"></param>
-        ///// <returns></returns>
-        //[HttpPut]
-        //public IActionResult Put(Car car)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        db.Update(car);
-        //        db.SaveChanges();
-        //        return Ok(car);
-        //    }
-        //    return BadRequest(ModelState);
-        //}
+   
 
 
         /// <summary>
@@ -154,22 +124,7 @@ namespace TestAngular5.Controllers
             }
         }
 
-        ///// <summary>
-        ///// Удаление Car
-        ///// </summary>
-        ///// <param name="id"></param>
-        ///// <returns></returns>
-        //[HttpDelete("{id}")]
-        //public IActionResult Delete(int id)
-        //{
-        //    Car car = db.Cars.FirstOrDefault(x => x.Id == id);
-        //    if (car != null)
-        //    {
-        //        db.Cars.Remove(car);
-        //        db.SaveChanges();
-        //    }
-        //    return Ok(car);
-        //}
+      
 
     }
 }

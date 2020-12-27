@@ -61,6 +61,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Dream.BusinessLogic.Models\Dream.BusinessLogic.Models.csproj" />
     <ProjectReference Include="..\Dream.BusinessLogic\Dream.BusinessLogic.csproj" />
     <ProjectReference Include="..\Dream.DataAccess\Dream.DataAccess.csproj" />
     <ProjectReference Include="..\Dream.DependencyInjection\Dream.DependencyInjection.csproj" />

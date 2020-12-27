@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Dream.DataAccess.Context;
 using Microsoft.EntityFrameworkCore;
 using Dream.DependencyInjection;
+using TestAngular5.Configuration;
 
 
 namespace TestAngular5
@@ -32,7 +33,8 @@ namespace TestAngular5
             {
                 configuration.RootPath = "ClientApp/dist";
             });
-            
+
+            services.RegisterAutoMapper();
             services.RegisterBusinessLogicServices();
         }
 
