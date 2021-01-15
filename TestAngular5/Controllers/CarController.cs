@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -7,7 +6,6 @@ using Dream.DataAccess.Context;
 using Dream.DataAccess.Models.Models;
 using Dream.Interfaces.Services;
 using Microsoft.AspNetCore.Http;
-//using TestAngular5.Models;  
 
 
 namespace TestAngular5.Controllers

@@ -1,9 +1,10 @@
-export class Person {
-  constructor(
-    public id?: number,
-    public name?: string,
-    public position?: string,
-    public image?: number,
-    public profile?:string
-  ) { }
+export interface IPerson {
+ 
+     id?: number,
+     name?: string,
+     position?: string,
+     image?: number,
+     profile?:string
+
 }
+//////////////////////////////////////////////////////////

@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { IPerson } from '../../Models/Staff';
 
  
 @Injectable()
@@ -10,9 +12,9 @@ export class DataService {
     constructor(private http: HttpClient) {
     }
  
-    getPersons() {
-        return this.http.get(this.url);
+    getPersons() : Observable<any> {
+        return this.http.get<IPerson>(this.url);
     }
      
-  
+  /////////////////////////////////////////////////////////////////////
 }
