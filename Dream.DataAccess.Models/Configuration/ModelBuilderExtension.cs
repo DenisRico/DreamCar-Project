@@ -11,6 +11,7 @@ namespace Dream.DataAccess.Models.Configuration
             builder.ApplyConfiguration(CarMap.Instance);
 
             builder.ApplyConfiguration(PersonMap.Instance);
+            
 
             return builder;
         }
